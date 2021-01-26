@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "us-east-2"
+    region = "ap-south-1"
 }
 variable "name" {
     description = "Name the instance on deploy"
@@ -11,7 +11,7 @@ variable "vpc_name" {
     description = "Name the vpc_name"
 }
 resource "aws_instance" "sentry" {
-    ami = "ami-03d64741867e7bb94"
+    ami = "ami-0a9d27a9f4f5c0efc"
     instance_type = "t2.large"
     key_name = "${var.key_name}"
     security_groups = ["${aws_security_group.sentry-sg.name}"]
