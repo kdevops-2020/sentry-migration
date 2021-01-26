@@ -2,12 +2,12 @@
 sudo rm -rf /tmp/sentry
 mkdir /tmp/sentry
 cd /tmp/sentry
-git clone https://github.com/AshutoshJha786/onpremise.git
+git clone https://github.com/kdevops-2020/onpremise-sentry.git
 if [ $? -ne 0 ]; then
   echo "repository not cloned"
    exit 1
 fi
-cd onpremise
+cd onpremise-sentry
 #sudo yum install docker -y
 #sudo service docker start
 sudo sh docker_install.sh
